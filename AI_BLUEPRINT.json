@@ -1,0 +1,142 @@
+{
+  "mode": "ai",
+  "project_title": "Research And Review Pair",
+  "short_description": "A multi-agent AI system for research and review collaboration",
+  "domain_summary": "The system aims to facilitate collaboration between researchers and reviewers in the academic community.",
+  "user_persona": "{'name': 'Dr. Emma Taylor', 'title': 'Researcher', 'description': 'A Ph.D. student in Computer Science, working on a research project in Natural Language Processing.', 'goals': ['Collaborate with reviewers to improve research quality', 'Streamline the review process', 'Improve communication between researchers and reviewers']}",
+  "architecture_notes": [
+    "Use a message broker (e.g., RabbitMQ) for inter-agent communication",
+    "Implement a knowledge graph using a graph database (e.g., Neo4j)",
+    "Use a containerization platform (e.g., Docker) for deployment"
+  ],
+  "backend_modules": [
+    "{'name': 'research_api', 'description': 'Provides APIs for research-related operations'}",
+    "{'name': 'review_api', 'description': 'Provides APIs for review-related operations'}",
+    "{'name': 'knowledge_graph_api', 'description': 'Provides APIs for knowledge graph-related operations'}"
+  ],
+  "frontend_features": [
+    "{'name': 'research_portal', 'description': 'A web interface for researchers to manage projects and collaborate with reviewers'}",
+    "{'name': 'review_portal', 'description': 'A web interface for reviewers to manage reviews and provide feedback to researchers'}"
+  ],
+  "data_sources": [
+    "{'name': 'research_database', 'description': 'Stores research-related data (e.g., papers, projects)'}",
+    "{'name': 'review_database', 'description': 'Stores review-related data (e.g., feedback, ratings)'}"
+  ],
+  "testing_strategy": [
+    "Unit testing, integration testing, and end-to-end testing using a testing framework (e.g., Pytest)"
+  ],
+  "starter_questions": [
+    "What are the research goals and objectives?",
+    "Who are the target reviewers and what are their expertise areas?",
+    "What are the key performance indicators (KPIs) for the system?"
+  ],
+  "workflow_steps": [
+    "{'name': 'Research Initiation', 'description': 'Researcher initiates a new project and defines research goals'}",
+    "{'name': 'Reviewer Assignment', 'description': 'System assigns reviewers to the project based on expertise and availability'}",
+    "{'name': 'Review and Feedback', 'description': 'Reviewer provides feedback and ratings to the researcher'}"
+  ],
+  "business_rules": [
+    "{'name': 'Reviewer Expertise', 'description': 'Reviewer must have expertise in the research area to be assigned to the project'}",
+    "{'name': 'Researcher Reputation', 'description': 'Researcher reputation affects the likelihood of being assigned to a project'}"
+  ],
+  "sample_documents": [
+    {
+      "filename": "research_project_description.txt",
+      "content": "This is a sample research project description."
+    },
+    {
+      "filename": "review_feedback.txt",
+      "content": "This is a sample review feedback."
+    }
+  ],
+  "tool_catalog": [
+    {
+      "name": "Docker",
+      "description": "A containerization platform for deployment"
+    },
+    {
+      "name": "RabbitMQ",
+      "description": "A message broker for inter-agent communication"
+    },
+    {
+      "name": "Neo4j",
+      "description": "A graph database for knowledge graph storage"
+    }
+  ],
+  "agent_plan": [
+    {
+      "name": "Architecture Agent",
+      "role": "Define app boundaries, data flow, runtime stack, and integration points.",
+      "outputs": [
+        "Use a message broker (e.g., RabbitMQ) for inter-agent communication",
+        "Implement a knowledge graph using a graph database (e.g., Neo4j)",
+        "Use a containerization platform (e.g., Docker) for deployment"
+      ]
+    },
+    {
+      "name": "Backend Agent",
+      "role": "Design FastAPI modules, service contracts, validation, and error handling.",
+      "outputs": [
+        "{'name': 'research_api', 'description': 'Provides APIs for research-related operations'}",
+        "{'name': 'review_api', 'description': 'Provides APIs for review-related operations'}",
+        "{'name': 'knowledge_graph_api', 'description': 'Provides APIs for knowledge graph-related operations'}"
+      ]
+    },
+    {
+      "name": "Frontend Agent",
+      "role": "Design React screens, state flow, controls, and user feedback states.",
+      "outputs": [
+        "{'name': 'research_portal', 'description': 'A web interface for researchers to manage projects and collaborate with reviewers'}",
+        "{'name': 'review_portal', 'description': 'A web interface for reviewers to manage reviews and provide feedback to researchers'}"
+      ]
+    },
+    {
+      "name": "Database Agent",
+      "role": "Design persistence models, sample data, indexes, and audit records.",
+      "outputs": [
+        "Run history",
+        "Source document metadata",
+        "Generated workflow audit records"
+      ]
+    },
+    {
+      "name": "Testing Agent",
+      "role": "Define contract tests, smoke tests, and generated project validation.",
+      "outputs": [
+        "Unit testing, integration testing, and end-to-end testing using a testing framework (e.g., Pytest)"
+      ]
+    },
+    {
+      "name": "DevOps Agent",
+      "role": "Define environment variables, Docker workflow, and repository packaging.",
+      "outputs": [
+        "Docker-ready project",
+        "Environment sample file",
+        "GitHub repository upload"
+      ]
+    },
+    {
+      "name": "Reviewer Agent",
+      "role": "Review the generated plan for completeness, security, and portfolio quality.",
+      "outputs": [
+        "{'name': 'Research Initiation', 'description': 'Researcher initiates a new project and defines research goals'}",
+        "{'name': 'Reviewer Assignment', 'description': 'System assigns reviewers to the project based on expertise and availability'}",
+        "{'name': 'Review and Feedback', 'description': 'Reviewer provides feedback and ratings to the researcher'}"
+      ]
+    }
+  ],
+  "model_provider": "groq",
+  "model_name": "llama-3.1-8b-instant",
+  "fallback_reason": "OpenAI limit reached. Automatically switched to Groq.",
+  "architecture": "Research Team Assistant",
+  "architecture_template_id": 22,
+  "architecture_template_path": "templates/multi-agent-ai/research-team-assistant",
+  "architecture_description": "Research Team Assistant for multi-role research synthesis.",
+  "validation_pipeline": [
+    "pytest",
+    "npm install",
+    "npm run build",
+    "docker compose config",
+    "docker compose build"
+  ]
+}
